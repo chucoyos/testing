@@ -1,5 +1,5 @@
-import CommentBox from './CommentBox.js';
-import CommentList from './CommentList.js';
+import CommentBox from 'components/CommentBox';
+import CommentList from 'components/CommentList';
 
 export default function App() {
 	return (
