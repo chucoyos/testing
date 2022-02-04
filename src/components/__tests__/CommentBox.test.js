@@ -19,7 +19,6 @@ afterEach(() => {
 });
 
 it('has a text area and a button', () => {
-	console.log(wrapped.find('textarea').length);
 	expect(wrapped.find('textarea').length).toEqual(1);
 	expect(wrapped.find('button').length).toEqual(1);
 });
