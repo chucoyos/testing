@@ -1,6 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default () => {
-	return <div className='CommentList'>CommentList component</div>;
-};
+class CommentList extends React.Component {
+	renderComments() {
+		return this.props.comments.map((comment) => {
+			return <li key={comment}>{comment}</li>;
+		});
+	}
+	render() {
+		return (
+			<div className='commentList'>
+				<ul>{this.renderComments()}</ul>
+			</div>
+		);
+	}
+}
+
+function mapStateToProps(state) {
+	return { comments: state.comments };
+}
+export default connect(mapStateToProps)(CommentList);
