@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class CommentList extends React.Component {
 	renderComments() {
@@ -10,6 +11,8 @@ class CommentList extends React.Component {
 	render() {
 		return (
 			<div className='commentList'>
+				<Link to='/post'>Add a Comment</Link>
+				<h4>Comment List</h4>
 				<ul>{this.renderComments()}</ul>
 			</div>
 		);

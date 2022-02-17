@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as actions from 'actions';
 
 class commentBox extends React.Component {
@@ -27,6 +28,7 @@ class commentBox extends React.Component {
 				<button className='fetch-comments' onClick={this.props.fetchComments}>
 					Fetch Comments
 				</button>
+				<Link to='/'>Comments</Link>
 			</div>
 		);
 	}
