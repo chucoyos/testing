@@ -11,7 +11,6 @@ class CommentList extends React.Component {
 	render() {
 		return (
 			<div className='commentList'>
-				<Link to='/post'>Add a Comment</Link>
 				<h4>Comment List</h4>
 				<ul>{this.renderComments()}</ul>
 			</div>
